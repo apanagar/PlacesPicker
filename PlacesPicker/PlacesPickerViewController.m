@@ -230,7 +230,7 @@
 
 #pragma Done callback
 - (void) pressedDone:(id)sender {
-	
+	[self.searchController setActive:NO animated:YES];
 }
 
 @end

@@ -17,8 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// Override point for customization after application launch.
-	
 	
 	PlacesPickerViewController *picker = [(UINavigationController *)(self.window.rootViewController) viewControllers][0];
 	picker.locationManager = [self getLocationManager];
