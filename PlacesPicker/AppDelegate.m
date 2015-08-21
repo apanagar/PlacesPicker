@@ -20,7 +20,7 @@
 	
 	PlacesPickerViewController *picker = [(UINavigationController *)(self.window.rootViewController) viewControllers][0];
 	picker.locationManager = [self getLocationManager];
-	picker.initialQuery = @"Amco Building in 94122";
+	picker.initialQuery = @"restaurants in 94122";
 	
 	 
 	return YES;

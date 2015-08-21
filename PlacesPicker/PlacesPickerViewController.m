@@ -7,7 +7,6 @@
 //
 
 #import "PlacesPickerViewController.h"
-#import "LocationPickerView.h"
 //#import "LSKit.h"
 #import "LSManager.h"
 #import "LSMapItem.h"
@@ -16,9 +15,6 @@
 #define kMinCapacity 5
 
 @interface PlacesPickerViewController ()
-@property (weak, nonatomic) IBOutlet LocationPickerView *locationPickerView;
-@property (strong, nonatomic) IBOutlet UISearchDisplayController *searchController;
-@property (strong, nonatomic) NSMutableArray *mapItems;
 @end
 
 @implementation PlacesPickerViewController
@@ -27,6 +23,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	self.navigationController.navigationItem.backBarButtonItem.title = @"";
 	self.searchController.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(pressedDone:)];
 
 //	self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
@@ -47,14 +44,14 @@
 	searchManager.delegate = self;
 	
 	if (self.initialQuery == nil){
-		self.initialQuery = @"restaurants";
+		self.initialQuery = [NSString stringWithFormat:@"%f,%f", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude];
 	}
 	[searchManager startOperationForQuery:self.initialQuery atLocation:currentLocation];
 	
 	
 	// Optional parameters
 	self.locationPickerView.delegate = self;
-	self.locationPickerView.shouldAutoCenterOnUserLocation = YES;
+	self.locationPickerView.shouldAutoCenterOnUserLocation = NO;
 	self.locationPickerView.shouldCreateHideMapButton = YES;
 	self.locationPickerView.pullToExpandMapEnabled = YES;
 	self.locationPickerView.defaultMapHeight = 220.0;           // larger than normal
@@ -216,6 +213,11 @@
 	[searchManager startOperationForQuery:searchBar.text atLocation:currentLocation];
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+	LSManager *searchManager = [LSManager sharedInstance];
+	CLLocation *currentLocation = [self.locationManager location];
+	[searchManager startOperationForQuery:searchBar.text atLocation:currentLocation];	
+}
 
 - (void)removeAllPinsButUserLocation
 {

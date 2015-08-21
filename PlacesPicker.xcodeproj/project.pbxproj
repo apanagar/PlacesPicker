@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D15A2641B7BE9890035BE2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A2631B7BE9890035BE2A /* main.m */; };
 		2D15A2671B7BE9890035BE2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A2661B7BE9890035BE2A /* AppDelegate.m */; };
-		2D15A26D1B7BE9890035BE2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D15A26B1B7BE9890035BE2A /* Main.storyboard */; };
+		2D15A26D1B7BE9890035BE2A /* PlacesPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D15A26B1B7BE9890035BE2A /* PlacesPicker.storyboard */; };
 		2D15A26F1B7BE9890035BE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D15A26E1B7BE9890035BE2A /* Images.xcassets */; };
 		2D15A2721B7BE9890035BE2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15A2701B7BE9890035BE2A /* LaunchScreen.xib */; };
 		2D15A27E1B7BE9890035BE2A /* PlacesPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A27D1B7BE9890035BE2A /* PlacesPickerTests.m */; };
@@ -33,7 +33,7 @@
 		2D15A2631B7BE9890035BE2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D15A2651B7BE9890035BE2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D15A2661B7BE9890035BE2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2D15A26C1B7BE9890035BE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D15A26C1B7BE9890035BE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PlacesPicker.storyboard; sourceTree = "<group>"; };
 		2D15A26E1B7BE9890035BE2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2D15A2711B7BE9890035BE2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2D15A2771B7BE9890035BE2A /* PlacesPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +92,7 @@
 				2D15A2881B7BF2B70035BE2A /* PlacesPickerViewController.m */,
 				2D15A2651B7BE9890035BE2A /* AppDelegate.h */,
 				2D15A2661B7BE9890035BE2A /* AppDelegate.m */,
-				2D15A26B1B7BE9890035BE2A /* Main.storyboard */,
+				2D15A26B1B7BE9890035BE2A /* PlacesPicker.storyboard */,
 				2D15A26E1B7BE9890035BE2A /* Images.xcassets */,
 				2D15A2701B7BE9890035BE2A /* LaunchScreen.xib */,
 				2D15A2611B7BE9890035BE2A /* Supporting Files */,
@@ -225,7 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D15A26D1B7BE9890035BE2A /* Main.storyboard in Resources */,
+				2D15A26D1B7BE9890035BE2A /* PlacesPicker.storyboard in Resources */,
 				2D15A2721B7BE9890035BE2A /* LaunchScreen.xib in Resources */,
 				2D15A26F1B7BE9890035BE2A /* Images.xcassets in Resources */,
 			);
@@ -303,12 +303,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2D15A26B1B7BE9890035BE2A /* Main.storyboard */ = {
+		2D15A26B1B7BE9890035BE2A /* PlacesPicker.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2D15A26C1B7BE9890035BE2A /* Base */,
 			);
-			name = Main.storyboard;
+			name = PlacesPicker.storyboard;
 			sourceTree = "<group>";
 		};
 		2D15A2701B7BE9890035BE2A /* LaunchScreen.xib */ = {
